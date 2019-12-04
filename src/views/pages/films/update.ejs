@@ -1,0 +1,26 @@
+<%- include('../../fragments/header.ejs'); %>
+<div class="line _bordered">
+        <a href="/films/add">Добавить</a>
+</div>
+
+<form class="form" method="POST" action="/films/update">
+    <div class="form__row">
+        <label class="form__cell _label" for="name">Название</label>
+        <input class="form__cell" type="text" value="<%= film.title %>" name="title" id="title">
+    </div>
+    <div class="form__row">
+        <label class="form__cell _label" for="login">Дата выхода</label>
+        <input class="form__cell" type="text" value="<%= film.dateRelise %>"  name="dateRelise" id="dateRelise">
+    </div>
+    <div class="form__row">
+        <label class="form__cell _label" for="email">Автор</label>
+        <input class="form__cell" type="text" value="<%= film.author %>" name="author" id="author">
+    </div>
+    <input class="form__cell _hidden" type="text" value="<%= film.id %>" name="id" id="author">
+    <div class="form__row">
+        <button class="form__button" type="submit">Submit</button>
+    </div>
+</form>
+</div>
+
+<%- include('../../fragments/footer.ejs'); %>

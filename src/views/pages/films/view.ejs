@@ -1,0 +1,45 @@
+<%- include('../../fragments/header.ejs'); %>
+<script>
+    function delFilm (filmID){
+        console.log(filmID);
+        const xhr = new XMLHttpRequest;
+        xhr.open('DELETE', `/films/${filmID}`);
+        xhr.send(filmID);
+        xhr.onreadystatechange = function() {
+            if(this.status === 200){
+                location.reload();
+            }
+        }
+    }
+
+    </script>
+<div class="line _bordered">
+    <a href="/films/add">Добавить</a>
+</div>
+
+<div class="line _table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Дата выхода</th>
+                    <th>Автор </th>
+                    <th>Опции</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% films.forEach(film => { %>
+                    <tr>
+                        <td><%= film.title %></td>
+                        <td><%= film.dateRelise %></td>
+                        <td><%= film.author %></td>
+                        <td>
+                            <a href="/films/update/<%= film.id %>">Изменить</a>
+                            <button onclick="delFilm('<%= film.id %>')">Delete</button>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+</div>
+<%- include('../../fragments/footer.ejs'); %>

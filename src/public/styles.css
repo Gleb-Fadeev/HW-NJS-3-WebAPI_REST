@@ -1,0 +1,178 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+    font-family: Arial, serif;
+}
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    background-color: #808080;
+  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #FFA000;
+}
+h1 {
+    font-size: 36px;
+}
+  
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #000;
+}
+
+h4 {
+  font-size: 22px;
+  color: #000;
+}
+
+h5 {
+  font-size: 20px;
+  color: #000;
+}
+
+h6 {
+  font-size: 18px;
+  color: #000;
+}
+input[type="text"] {
+  border: none;
+}
+
+input[type="text"]:focus,
+input[type="text"]:active {
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #A52A2A;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #003869;
+}
+.line._title {
+  padding-top: 30px;
+}
+li {
+  line-height: 42px;
+  list-style-type: none;
+}
+.lost-icon {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #003869;
+  vertical-align: middle;
+  transform: rotatez(45deg);
+  margin-right: 10px;
+}
+.line._table {
+  padding-top: 25px;
+}
+
+.line._form {
+  padding-top: 50px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 10px;
+  border: 1px solid #FFA000;
+  color: #A52A2A;
+  text-align: center;
+}
+
+th {
+  color: #FFA000;
+}
+
+textarea {
+  min-height: 48px;
+  line-height: 24px;
+  border: 1px solid #FFA000;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+textarea:focus,
+textarea:active {
+  outline: none;
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.form__cell._label {
+  flex-basis: 150px;
+  min-width: 150px;
+  font-size: 18px;
+  color: #FFA000;
+}
+
+.form__error {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #c40000;
+  border: 2px solid #c40000;
+}
+
+.form__button {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 10px 25px;
+  border: 2px solid #FFA000;
+  cursor: pointer;
+  color: #FFA000;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.form__button:hover,
+.form__button:focus,
+.form__button:active {
+  color: #fff;
+  background-color:#FFA000;
+}
+
+._hidden {
+  display: none;
+}
