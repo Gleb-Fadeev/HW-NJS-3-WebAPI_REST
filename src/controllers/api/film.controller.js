@@ -35,7 +35,6 @@ router.post('/add', async (request, response) => {
         ...request.body
     }
     await filmRepo.add(film);
-    response.redirect('/films');
 });
 
 router.get('/update/:id', async(_request, response) => {
@@ -43,12 +42,10 @@ router.get('/update/:id', async(_request, response) => {
     console.log(_request.params.id);
     
     const film = films.find(f => f.id === _request.params.id);
-    response.render('pages/films/update', {film});
 })
 
 router.post('/update', async (request, response) => {
     await filmRepo.update(request.body);
-    response.redirect('/films');
 });
 
 router.delete('/:id', async (request, response) => {
